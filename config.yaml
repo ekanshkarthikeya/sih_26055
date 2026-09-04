@@ -1,0 +1,22 @@
+# ==============================================================
+# DRDO EW Smart Scan Receiver Configuration
+# Problem Statement: 26055
+# ==============================================================
+
+hardware:
+  num_bands: 16
+  default_dwell_us: 45.0
+  receiver_pd: 0.95            # Receiver Probability of Detection (Sensitivity)
+  max_slew_penalty_us: 45.0    # Maximum LO settling time across full spectrum
+
+scheduler:
+  max_starve_ms: 60.0          # Hard RTOS deterministic starvation limit
+  max_consecutive_dwells: 4    # Maximum burst hold capability
+
+signal_processing:
+  ring_buffer_capacity: 2048   # O(1) static memory limit for PDW ingestion
+  sdif_bin_width_us: 2.0
+  min_pri_us: 5.0
+  max_pri_us: 2500.0
+  sdif_max_order: 4
+  sdif_threshold_factor: 0.35
