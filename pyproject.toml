@@ -1,13 +1,55 @@
 [project]
 name = "sih-smart-scan"
 version = "0.1.0"
-description = "Add your description here"
+description = "Smart Scan Strategies for Electronic Warfare ES Receivers (DRDO Problem Statement 26055)"
 readme = "README.md"
 authors = [
     { name = "ekansh", email = "ekanshkarthikeya@gmail.com" }
 ]
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "reportlab>=4.0.0",
+    "pyyaml>=6.0",
+    "h5py>=3.8.0",
+    "huggingface-hub>=0.20.0",
+    "rich>=13.0.0",
+    "python-pptx>=0.6.21",
+    "jaxtyping>=0.2.0",
+    "typeguard>=2.13.0"
+]
+
+[project.scripts]
+sih-smart-scan = "sih_smart_scan:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"[project]
+name = "sih-smart-scan"
+version = "0.1.0"
+description = "Smart Scan Strategies for Electronic Warfare ES Receivers (DRDO Problem Statement 26055)"
+readme = "README.md"
+authors = [
+    { name = "ekansh", email = "ekanshkarthikeya@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "reportlab>=4.0.0",
+    "pyyaml>=6.0",
+    "h5py>=3.8.0",
+    "huggingface-hub>=0.20.0",
+    "rich>=13.0.0",
+    "python-pptx>=0.6.21",
+    "jaxtyping>=0.2.0",
+    "typeguard>=2.13.0"
+]
 
 [project.scripts]
 sih-smart-scan = "sih_smart_scan:main"
